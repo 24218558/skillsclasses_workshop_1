@@ -1,4 +1,5 @@
-#skillsclasses_workshop_1
+# skillsclasses_workshop_1
+
 Main repository for coding practice
 
 ### .ipynb files
