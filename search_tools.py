@@ -1,33 +1,27 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[8]:
-
-
-get_ipython().system('jupyter nbconvert --to script search_word.ipynb')
-
-
-# In[5]:
+# In[1]:
 
 
 import sys
 import os
 
 
-# In[6]:
+# In[2]:
 
 
 sys.path.append(os.getcwd())
 
 
-# In[9]:
+# In[3]:
 
 
 # Import necessary libraries
 from search_word import simple_search, tfidf_search, svd_search
 
 
-# In[10]:
+# In[4]:
 
 
 # Execute search with user input
@@ -43,7 +37,7 @@ def search_database(query, method='simple', num_results=5):
         return []
 
 
-# In[14]:
+# In[7]:
 
 
 #Testing
@@ -52,7 +46,7 @@ method = input("Enter search method (simple, tfidf, svd): ")
 num_results = int(input("Enter number of results: "))
 results = search_database(query, method, num_results)
 for result in results:
-    print(f"Book ID: {result['Book ID']}, Paragraph Number: {result['NR']}\nFull Text: {result['TEXT']}\nProcessed Text: {result['Processed Text']}\n")
+    print(f"BOOK: {result['BOOK']}, LINE: {result['LINE']}\nTEXT: {result['TEXT']}\nKEYWORD: {result['KEYWORD']}\n")
 
 
 # In[ ]:
